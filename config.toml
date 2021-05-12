@@ -33,7 +33,6 @@ menu_items = [
     {name = "life", url = "$BASE_URL/life"},
     {name = "music", url = "$BASE_URL/music"},
     {name = "slides & lectures", url = "$BASE_URL/slides"},
-    {name = "tags", url = "$BASE_URL/tags"},
     {name = "resume", url = "https://drive.google.com/file/d/1SRLOWzDTIrn15jEYsa1CRluOXcNGssvr/view", newtab = true},
     {name = "contact me", url = "$BASE_URL/contact"}
 ]
