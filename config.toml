@@ -1,5 +1,6 @@
 # The URL the site will be built for
 base_url = "https://grapheo12.in"
+tile = "grapheo12's Blog"
 
 theme = "terminimal"
 # Whether to automatically compile all Sass files in the sass directory
@@ -32,7 +33,9 @@ menu_items = [
     {name = "life", url = "$BASE_URL/life"},
     {name = "music", url = "$BASE_URL/music"},
     {name = "slides & lectures", url = "$BASE_URL/slides"},
-    {name = "tags", url = "$BASE_URL/tags"}
+    {name = "tags", url = "$BASE_URL/tags"},
+    {name = "resume", url = "https://drive.google.com/file/d/1SRLOWzDTIrn15jEYsa1CRluOXcNGssvr/view", newtab = true},
+    {name = "contact me", url = "$BASE_URL/contact"}
 ]
 
 enable_post_view_navigation = true
