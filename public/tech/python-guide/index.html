@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://grapheo12.in/style.css">
+    <link rel="stylesheet" href="https://grapheo12.in/color/green.css">
+
+        <link rel="stylesheet" href="https://grapheo12.in/color/background_black.css">
+    
+    <link rel="stylesheet" href="https://grapheo12.in/font-hack.css">
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+    };
+</script>
+</head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://grapheo12.in" style="text-decoration: none;">
+                    <div class="logo">
+                            grapheo12
+                        </div>
+                </a>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <ul class="menu__inner">
+                <li><a href="https://grapheo12.in">about me</a></li>
+            
+                <li class="active"><a href="https://grapheo12.in/tech">tech</a></li>
+            
+                <li><a href="https://grapheo12.in/literature">literature</a></li>
+            
+                <li><a href="https://grapheo12.in/life">life</a></li>
+            
+                <li><a href="https://grapheo12.in/music">music</a></li>
+            
+                <li><a href="https://grapheo12.in/slides">slides & lectures</a></li>
+            
+                <li><a href="https://grapheo12.in/tags">tags</a></li>
+            </ul>
+        </nav>
+    
+    </header>
+    
+
+    <div class="content">
+        
+    <div class="post">
+        
+    <h1 class="post-title"><a href="https://grapheo12.in/tech/python-guide/">Beginner&#x27;s Guide to Python</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2020-01-01
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://grapheo12.in/tags/python/">#python</a>&nbsp;
+                <a class="post-tag" href="https://grapheo12.in/tags/python3/">#python3</a>&nbsp;
+                <a class="post-tag" href="https://grapheo12.in/tags/tutorial/">#tutorial</a></span>
+    
+
+        
+        <div class="post-content">
+            <h2 id="what-is-python">What is Python?</h2>
+<blockquote>
+<p>The <em>Pythonidae</em>, commonly known simply as pythons, are a family of
+nonvenomous snakes found in Africa, Asia, and Australia. Among its
+members are some of the largest snakes in the world.</p>
+</blockquote>
+<p>-- Wikipedia</p>
+<p>Well, I didn't mean this Python!</p>
+<span id="continue-reading"></span>
+<p>Python is now among the top 3 programming languages in demand in
+today's world. The reason for its popularity being: <em>Readability</em>,
+<em>Robustness</em> and <em>a big collection of actively maintained libraries</em>.</p>
+<p>Python was designed by the BDFL, <em>Guido van Rossum</em> in 1991. Since then
+there has been different flavours of Python: <em>CPython</em> (the original
+implementation), <em>Cython</em>, <em>IPython</em>, <em>PyPy</em> etc. They all serve
+specific purposes. Here I'll be talking about CPython exclusively.</p>
+<p>I am still learning Python. So this beginner's guide will be the path I
+followed to reach to the stage that I'm currently in. Whether you want
+Python for web development, for data scraping or for Data Analytics --
+you must go through these basics to be proficient in Python.</p>
+<h2 id="first-steps">First steps</h2>
+<p>I began my Python journey with <em>Zed A. Shaw</em>'s book <strong>Learn Python
+The Hard Way</strong>. The book was a work in progress then and hence, quite
+fortunately, it was free. This is not the case now. Besides teaching you
+the syntax, this book teaches you the Pythonic Way of Programming. I
+knew PHP before Python. But that I learnt solely from a web development
+point of view. Hence Python was the first time I learnt to do general
+purpose coding and trust me the learning curve is not that steep.</p>
+<p>Next, I came across this excellent book called: <strong>Think Python: How to
+think like a computer scientist</strong> by <em>Allen B. Downey</em>. At that time
+Python 2.7 was in vogue and people were slowly adopting to Python 3.
+This book, at that time, was written in Python 2. The 2nd edition has
+now migrated to Python 3 though. I followed this book almost religiously
+and read it twice. It covered all the basic concepts required to have a
+successful core Python programmer. Apart from just basic syntax, the
+book covers many useful topics like <em>Pickle</em>, <em>Database connection</em>,
+<em>Image Processing with PIL</em>, <em>GUI Programming with Tkinter</em> etc. You
+don't have to learn all this at the first go. But keep this book handy,
+if you need some help later. Around this time I got to know the mantra
+that every Python Programmer should follow:</p>
+<pre style="background-color:#151515;">
+<code><span style="color:#e8e8d3;">&gt;&gt;&gt; </span><span style="color:#8fbfdc;">import </span><span style="color:#e8e8d3;">this
+
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren</span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">t special enough to break the rules.
+</span><span style="color:#e8e8d3;">Although practicality beats purity.
+Errors should never </span><span style="color:#8fbfdc;">pass </span><span style="color:#e8e8d3;">silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you</span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">re Dutch.
+</span><span style="color:#e8e8d3;">Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it</span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">s a bad idea.
+</span><span style="color:#e8e8d3;">If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let</span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">s do more of those!
+</span></code></pre>
+<p>Things above may not make much sense if you're a complete beginner. But
+over the time you'll get a hang of it.</p>
+<p>After a long pause, when I took up Python again, the world had moved on
+to Python 3. I then used the tutorial given in the <strong>Official Python 3
+docs</strong> to regain my wits.</p>
+<h2 id="what-s-next">What's next</h2>
+<p>After all these, one should really focus on being as Pythonic as (s)he
+can. For this, I recommend learning <em>Generators</em>, <em>List Comprehension</em>
+and <em>Decorators</em>. While doing OOP, learn to leverage the power of
+<em>dunder methods</em> and <em>operator overloading</em>. Also try to follow the
+<strong>PEP8</strong> guidelines in your code.</p>
+<h3 id="note">Note</h3>
+<blockquote>
+<p>It is good to know some core CS concepts involved behind the scenes,
+such as, <strong>GIL</strong>, <strong>Method Resolution Order</strong>, <strong>Key-sharing Dict</strong> etc.
+You can follow <em>Raymond Hettinger</em>'s lectures for the same.</p>
+</blockquote>
+<p>One of the most important and often overlooked topic of Python is
+<strong>making packages</strong> and publishing them to <strong>PyPI</strong> (<strong>Py</strong>thon
+<strong>P</strong>ackage <strong>I</strong>ndex) and <strong>dependency management</strong>. The most useful
+management tools are <strong>virtualenv</strong> and <strong>pipenv</strong>.</p>
+<p>What you learn next totally depends on the domain of your usage. Here
+are some domain-specific libraries that you should know:</p>
+<ol>
+<li>Web Development: Flask, Django</li>
+<li>Data Science/ML/DL: Numpy, Pandas, Matplotlib, Scikit-learn,
+Tensorflow, Pytorch</li>
+<li>Web Scraping: Selenium, Scrapy</li>
+<li>Generic good-to-know modules: argparse, re, multiprocessing,
+subprocess, sys, os, requests, logging, setuptools</li>
+</ol>
+<h3 id="warning">Warning</h3>
+<blockquote>
+<p>Never just learn a concept or library. Use it in a learning project. It
+is impossible to learn every intricacy of a module in one tutorial. Keep
+the official docs and StackOverflow handy.</p>
+</blockquote>
+<h2 id="tl-dr">TL;DR</h2>
+<p><strong>Here is a quick summary:</strong></p>
+<ul>
+<li>Read <strong>Learn Python The Hard Way</strong> and <strong>Think Python</strong>.</li>
+<li>Read the tutorial given in <strong>Official Python 3 docs</strong>.</li>
+<li>Learn the Pythonic way of doing things (Idiomatic Python).</li>
+<li>Learn domain specific libraries as discussed just above.</li>
+<li>Code a lot in Python</li>
+</ul>
+
+        </div>
+
+        
+        <div class="pagination">
+            <div class="pagination__title">
+                <span class="pagination__title-h">Not bored enough? See other posts....</span>
+                <hr />
+            </div>
+            <div class="pagination__buttons">
+                    <span class="button previous">
+                        <a href="https://grapheo12.in/tech/terminal-apps/">
+                            <span class="button__icon">←</span>&nbsp;
+                            <span class="button__text">Cut bloat, move fast with Terminal apps</span>
+                        </a>
+                    </span>
+                
+                </div>
+        </div>
+    
+    </div>
+
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright">
+                        <span>© 
+    2021
+ Shubham Mishra</span>
+                    <span class="copyright-theme">
+                        <span class="copyright-theme-sep">:: </span>
+                        Theme: <a href="https://github.com/pawroman/zola-theme-terminimal/">Terminimal</a> by pawroman
+                    </span>
+                </div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>

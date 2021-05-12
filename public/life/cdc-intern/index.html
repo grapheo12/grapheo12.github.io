@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://grapheo12.in/style.css">
+    <link rel="stylesheet" href="https://grapheo12.in/color/green.css">
+
+        <link rel="stylesheet" href="https://grapheo12.in/color/background_black.css">
+    
+    <link rel="stylesheet" href="https://grapheo12.in/font-hack.css">
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+    };
+</script>
+</head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://grapheo12.in" style="text-decoration: none;">
+                    <div class="logo">
+                            grapheo12
+                        </div>
+                </a>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <ul class="menu__inner">
+                <li><a href="https://grapheo12.in">about me</a></li>
+            
+                <li><a href="https://grapheo12.in/tech">tech</a></li>
+            
+                <li><a href="https://grapheo12.in/literature">literature</a></li>
+            
+                <li class="active"><a href="https://grapheo12.in/life">life</a></li>
+            
+                <li><a href="https://grapheo12.in/music">music</a></li>
+            
+                <li><a href="https://grapheo12.in/slides">slides & lectures</a></li>
+            
+                <li><a href="https://grapheo12.in/tags">tags</a></li>
+            </ul>
+        </nav>
+    
+    </header>
+    
+
+    <div class="content">
+        
+    <div class="post">
+        
+    <h1 class="post-title"><a href="https://grapheo12.in/life/cdc-intern/">Cracking CDC, perspective of a non-CP guy</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2020-09-10
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://grapheo12.in/tags/internships/">#internships</a>&nbsp;
+                <a class="post-tag" href="https://grapheo12.in/tags/interviews/">#interviews</a>&nbsp;
+                <a class="post-tag" href="https://grapheo12.in/tags/c/">#c++</a>&nbsp;
+                <a class="post-tag" href="https://grapheo12.in/tags/python/">#python</a></span>
+    
+
+        
+        <div class="post-content">
+            <p>This is a <code>long long</code> story (pun intended). I repeat, it's a story. Not a fundae post. Not a GeeksForGeeks Interview Experience.
+This post contains links to some great KGPians I have seen.
+For giving fundae, they are way more qualified than I am.</p>
+<p>You can binary search for topics of your interest from the headings.</p>
+<span id="continue-reading"></span><h2 id="context">Context</h2>
+<p>CDC stands for Career Development Centre. It is the so-called training and placement cell of IIT Kharagpur, my college.
+CP refers to Competitive Programming in the rest of the blog.
+At KGP, we have to do a mandatory internship at the end of 3rd year.
+The companies make the selections for the same at the beginning of the 3rd year.</p>
+<p><strong>Update</strong>: My CGPA is kinda high in KGP context (at the end of the 4th semester, it is 9.74).</p>
+<p>Warning again: Don't see this as a fundae post.</p>
+<h2 id="few-traits-of-me">Few traits of me</h2>
+<p>If you follow my blog, we should know that I am not a CP guy.
+In a college, where doing CP, irrespective of the branch, is a norm, it kinda feels awkward sometimes.
+It is not that I hate CP. I respect it as a sport.
+Having said that, I’m not too fond of it as well :-)</p>
+<p>I am more inclined towards Open Source Development and designing systems.
+But, in India, to get a Software Developer job,
+your &quot;problem-solving skills&quot; and &quot;data structure and algorithms&quot; must be strong.
+In other words, you must be good at CP.</p>
+<p>Naturally, I was scared as hell about CDC, starting from my 2nd year itself.
+But, being a very very lazy person when it comes to CP, I did not invest time in it.</p>
+<h2 id="preparation-for-the-inevitable">Preparation for the inevitable</h2>
+<p>In March, the college got locked down, and I came home.
+That was the start of a LOOONG vacation.</p>
+<p>I thought maybe this is a good opportunity to start working on my CP skills since CDC would occur anyway.
+So I ventured out.
+I started solving virtual contests in Codeforces.
+I started doing Data Structure questions in LeetCode as well.
+I remember giving one or two long challenges in Codechef as well (I was just a few hundred points short of achieving 4 stars, you know).</p>
+<p>Around this time, <a href="https://www.facebook.com/goc.iitkgp">Grimoire of Code</a> took an initiative of assigning mentors for CP.
+My mentors were Rakesh Malaviya and <a href="https://www.facebook.com/mayankgagrawal">Mayank Agarwal</a>.
+I started following their advice and solved a few questions of <a href="https://cp-algorithms.com/data_structures/disjoint_set_union.html">Disjoint Set Union</a> and <a href="https://www.geeksforgeeks.org/binary-search/">Binary Search</a>.
+Then I learnt the topic of <a href="https://cp-algorithms.com/data_structures/segment_tree.html">Segment Trees</a>.
+But then the proceedings in the group came to a halt (sad, isn't it?)</p>
+<p>At this time, I contacted some of my seniors in <a href="https://kossiitkgp.org/">KOSS</a>. At KOSS, we share a common implicit disinterest in CP.
+(Well, many of us. Some of us are damn good at it.)</p>
+<p>I contacted <a href="https://github.com/yashrsharma44">Yash Sharma</a>, who cracked Google Mountain View Internship when we were about to leave college.
+I got to know that there is a significant difference in the questions asked in companies in the US and India.
+US companies focus on LeetCode-ish problems, whereas Indian companies focus more on Codeforces and Codechef.
+The number of LeetCode questions he solved was an order of magnitude higher than what I had,
+which was quite intimidating.</p>
+<p>I also contacted <a href="https://github.com/krritik">Ritik Kumar</a>, who got a pre-placement offer in Microsoft through CDC.
+I talked about my failing conditions in CP,
+and he motivated me to work hard.
+From his advice, I started solving the A2OJ C <a href="https://a2oj.com/ladders">Ladder</a> questions (solved 10-15, not many you see).</p>
+<p>I also took fundae from countless seniors. I am sorry if I forgot to mention some of them.</p>
+<h2 id="the-other-side-of-the-coin">The other side of the coin</h2>
+<p>If you think I want to mean I did CP religiously for CDC reasons and got better at it in the vacation,
+you are in the wrong.
+This is my story, and things won't happen as the general notion in KGP suggests.</p>
+<p>I started looking into GSoC. I chose Ceph as my organization.
+Although I was late, I worked diligently to get in.
+But I was rejected. And it still hurts to this day.</p>
+<p>I was getting pretty bored of spending my days in leisure or in CP only.
+So I approached <a href="https://cse.iitkgp.ac.in/%7Emainack/">Prof. Mainack Mondal</a> for a project in the Security and Privacy field.
+Around April, we started looking into two topics together, and then the days kinda went flying by.</p>
+<p>Having said this, to be completely honest,
+I wasn't spending all of my working hours to work on the project or on CP.
+I was learning new stuff as well as completing the pending coursework.
+I must thank sir here for being patient with me (he still is patient).
+One of the topics that we looked into came to a halt due to lack of public data, after 3 months of a wild goose chase.
+That's another story!</p>
+<p>I also tried my hands in learning to hack.
+I solved 3 easy <a href="https://hackthebox.eu">HackTheBox</a> boxes.
+But then the boxes become considerably more challenging, and I stopped for the lack of time.</p>
+<p>It was around mid-April to May, when the final lab tests and project submissions were happening,
+that <a href="https://github.com/grapheo12/iqps">IQPS</a> came out as my software engineering term project.
+It became the star of my resume.
+At MetaKGP, I started the process of deploying it with <a href="https://thealphadollar.me/">Shivam Kumar Jha</a>.
+(Although he is a senior, I said &quot;deploying <em>with</em>&quot; not &quot;<em>working under</em>&quot;.
+This is because he doesn't let me feel inferior, although I really am)</p>
+<p>After that, I completed the <a href="https://deeplearning.ai">Deep Learning Specialisation</a> in Coursera.
+I also completed the Google Foobar challenge during this period.</p>
+<p>From KOSS, we started developing the <a href="https://wiki.metakgp.org/w/Kharagpur_Winter_of_Code">KWoC</a> website. For that, I learnt basic Golang.</p>
+<p>I took up another project under the <a href="http://www.ai.iitkgp.ac.in/">Center for Excellence of Artificial Intelligence</a>,
+under <a href="https://github.com/Gauraviitkgp">Gaurav Suryawanshi</a>.
+It started as yet another quick backend job.
+But it quickly escalated to a complicated Full Stack Job.
+Plus I learnt a thing or two about team management.</p>
+<p>Also, I was watching a lot of Anime and Netflix.</p>
+<p>So, you see, I had many things on my plate.</p>
+<h2 id="interviewbit-to-rescue">InterviewBit to rescue</h2>
+<p>Time is a river.
+The approaching dates of CDC soon raised a red flag in my head.
+I still didn't have a thorough revision of my Algorithms-I course.
+Plus the CP thing wasn't taking me anywhere.</p>
+<p>I talked with <a href="https://www.facebook.com/rohithmulumudy">Rohith Reddy</a>, who works at Salesforce now, and with whom I work under Prof. Mainack Mondal.
+He told me that I should have enough capability to solve Codeforces A-D
+(which I will never have).
+It is he who suggested me to work my way through InterviewBit religiously.</p>
+<p><a href="http://interviewbit.com/">InterviewBit</a> actually doesn't need any promotion.
+It is hands-down the best site for Algorithms review.</p>
+<p>I started solving it.
+But I am an atheist, you know.
+I solved only 1-2 problems from each category.</p>
+<p>By the end of my prep, I was around the 80-90th position in my batch in the institute (pretty bad, right!)</p>
+<p>Around the time when I was near Trees in InterviewBit (maybe a little earlier),
+Grimoire of Code came up with mock CDC coding tests.
+It's a brilliant effort.
+But it was a confidence breaker.
+While I could barely solve 1 or 2 questions,
+I saw CP masters of our batch like <a href="https://www.facebook.com/hardik.aggarwal.75">Hardik Aggarwal</a> (incoming Sprinklr intern), <a href="https://github.com/debajyotidasgupta">Debajyoti Dasgupta</a> (well, his CDC game is next year) and others doing all 6 in the given time.</p>
+<blockquote>
+<p>On a personal note, the only good thing that happened to me in my college-life
+had been me getting a Department Change to Computer Science and Engineering.
+Else, it is just a story of continuous rejections.
+Grimoire of Code's series added to that.
+I was quite ready to accept the fact I might not even get a single intern through CDC.
+I did not let my parents know what I was going through;
+otherwise, they would get tensed unnecessarily.</p>
+</blockquote>
+<h2 id="coding-tests-begin">Coding tests begin</h2>
+<p>I registered for <a href="https://wiki.metakgp.org/w/MFTP">MFTP</a>, which is relays notices from CDC noticeboard to my email.
+Around August, my mailbox started to fill up CDC notices, reminding me to register and prepare my resume there.</p>
+<p>I had to redo my resume in the CDC portal. And it is a horrible experience!
+They use a stripped-down version of <a href="https://ckeditor.com/">CKEditor</a>,
+with important stuff like bullets turned off.
+I tried to hack around, got the full Editor, but finally couldn't get the features working in the backend.
+Then came the even more horrible part of uploading documents for each little thing I mentioned in my resume.
+It's a pure pain in this COVID situation.</p>
+<p>However, I did what I needed to do.
+I was mentally preparing myself to survive failures
+and to see my friends tagging each other with &quot;#Machaya&quot;, &quot;#SummerSorted&quot; posts.</p>
+<p>I started emailing professors in the security field around the world
+asking if they would let me do an internship for the coming summer.
+I even got lucky twice (well 1.5 times to be precise) with 2 US universities.
+Thanks to the tips given by our venerable senior <a href="https://github.com/americast">Sayan Sinha</a> (incoming PhD in Georgia Tech)
+But then all of these got on hold.</p>
+<p>I think, owing to the COVID situations, the tests were easier compared to other years.
+But the webcam proctoring was quite a new thing.</p>
+<p>The first test was of Google. I was couldn't even complete one question.
+Then companies started flooding in.
+Codings tests and Pre-placement talks started happening day in and day out.</p>
+<p>I even got sick for one day, due to which I had to lose the test of Sprinklr and Nutanix.</p>
+<p>After each test, I used to call two of my very close friends, <a href="https://www.facebook.com/sagnik.roy.1029770">Sagnik Roy</a> (incoming Microsoft intern) and <a href="https://github.com/mukul-mehta">Mukul Mehta</a> (incoming Oracle intern),
+and we used to discuss the solutions.
+Most of the times, they used to solve more than I did.
+Needless to say, it added to my pressure.</p>
+<p>Besides DE Shaw, I appeared for tests in Quadeye, Microsoft, Nvidia, JPMC, Oracle, Uber and many others.
+I used to solve around 75% of each of the tests,
+which left me in a hanging position regarding shortlistings.</p>
+<blockquote>
+<p>I used Python for my tests.
+Python gives much more ease of use than C++.
+If you know the standard library in Python well,
+you can write short and efficient code without needing to remember much boilerplate.</p>
+</blockquote>
+<p>Having said that, Microsoft really betrayed Python users.
+The questions were simple enough.
+There was a question on median finding.
+Sagnik and I both implemented an  $O(n \cdot lg(n))$ solution.
+His C++ solution passed. My Python solution did not.
+It was not even due to time limits.</p>
+<h2 id="when-the-hell-are-you-going-to-talk-about-de-shaw">When the hell are you going to talk about DE Shaw?</h2>
+<p>DE Shaw came to give a pre-placement talk for our campus.
+I was instantly in love with the vibe of the company.
+I liked what it does.
+I liked how the employees were enthusiastic about their work.
+They also promised a good stipend.
+After the PPT, I was quite sure I wanted to go there.</p>
+<p>The coding test happened after the terrible Google test.
+I was at the nadir of confidence.</p>
+<p>Guess what; the test went well.</p>
+<p>There were 3 questions:</p>
+<ul>
+<li>the first one was easy brute force based,</li>
+<li>the second one was on combinatorics where knowledge of modular exponentiation was needed
+(Python's <code>pow</code> saved time),</li>
+<li>and the third one was a tree/graph question with a lot of cases to handle.</li>
+</ul>
+<p>I partially solved the third one, but fully solved the other two.</p>
+<p>As said by seniors, I was really hoping to get shortlisted.</p>
+<h2 id="the-d-day">The D-Day</h2>
+<p>On 4th September, the shortlists for Day 1 came out.
+I was thrilled to see myself getting shortlisted for DE Shaw and Quadeye.
+At the same time, I was a little disappointed for not getting selected in Microsoft and Uber.</p>
+<p>I shaved my beard and took out my best formals. The stage was set. Interviews would start at 7 am.
+I placed DE Shaw over Quadeye in my preference.</p>
+<p>Laying down in my bed after dinner, I started reading up C++ internals,
+for example, how do virtual functions, constructors etc. work,
+as these were some of the key questions DE Shaw is known to ask.</p>
+<p>I slept really tensed. I woke up the next day at 6 am.
+I got ready. My interview was scheduled at 7 am sharp.</p>
+<p>I was greeted by two interviewers. The interview was on Hackerrank Codepair.
+They started asking about my projects, which I explained with all my heart.</p>
+<p>Then they asked me to rate my abilities in Python and C++.
+I said that if Python is 5, C++ is 3.
+So they started a rapid-fire of Python internal questions.
+I mostly answered them confidently.
+Then they switched to C++. I was not so confident about my answers.
+But, on the prompt of my interviewer, I tried to answer the unknowns with what seemed sane to me as a language designer.</p>
+<p>We were short on time, so the interviewer then gave me a quick algorithms based question.
+In a gist, it was about partitioning a set of integers into $n$ partitions such that
+the sum of the absolute difference of the sum of the integers in pairs of such partition is the minimum possible.
+I was a little intimidated by it.
+I came up with a Recursive Brute force solution and was trying to optimize it using memoization.
+But the interviewer did not like the approach.
+He hinted towards a greedy solution.
+But I could not figure it out.
+Since we were running out of time, he said that it was okay, and asked if I had any questions.
+I asked about their tech stack, which they said was mostly in Python.
+Thus ended the first round.
+The full duration of the interview was around 1 hour.</p>
+<p>After this, I was in a great mental dilemma about whether I would proceed to the next round or not.
+Luckily I did!
+The next round was an hour later.
+I took a cup of coffee and prepared myself.</p>
+<p>The next round was again on Codepair.
+This time also I was asked a lot of questions on Python internals.</p>
+<p>Then one of the two interviewers asked me the Longest Increasing Subsequence problem.
+I gave him the Dynamic Programming based $O(n ^ 2)$ solution.
+Then I was asked to improve it further.
+My mind was stuck on the DP approach of doing it,
+and I forgot the $O(n \cdot lg(n))$ solution since it was not very trivial to remember.
+I tried a stack-based solution, but it was bound to fail.</p>
+<p>The interviewer then told me to code up the DP solution, which I did in C++.
+We ran a testcase to see if it was working or not.</p>
+<p>After this, another interviewer took over.
+I had previously mentioned I know SQL basics.
+So he gave me a schema of an E-commerce site and told me to fetch all those products that have not been purchased ever.
+I came up with a straight-forward solution using nested queries, but he didn't like it.
+I tried using outer joins, but I messed it up a bit.
+Then he asked me about the difference between Left and Right Outer Joins.</p>
+<p>And that was the end of the second round.</p>
+<p>I don't remember the exact rounds in which they were asked, but here are some of the Python concepts that I was asked:</p>
+<ul>
+<li>Decorators</li>
+<li>Generators</li>
+<li>Context Managers (I also explained how <code>with...as</code> works)</li>
+<li>Difference between C++ and Python</li>
+<li>What is stored in the <code>.pyc</code> files (I couldn't answer this confidently)</li>
+</ul>
+<h2 id="the-hardest-part-waiting-for-results">The hardest part... waiting for results</h2>
+<p>The second round also took about an hour.
+Then started my awful hours of waiting.</p>
+<p>I must thank here <a href="https://www.facebook.com/amritashbharadwaj">Amritash Bharadwaj</a>, our Point of Contact,
+for bearing with my incessant queries.</p>
+<p>I also gave one round of Quadeye interview but was barred from moving forward.</p>
+<p>Finally, after a long wait, the results came out around midnight.</p>
+<p>I was very happy to see my name on the list.
+My family seemed even happier.</p>
+<p>Before this, I was of the opinion that given a chance, I would go for a foreign university.
+After the offer, I am reconsidering, xD.</p>
+<p><img src="/img/shikamaru.jpeg" alt="I do not have rights to the image" /></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Here are a few of the things I want to tell the people who will be in my position next year:</p>
+<ol>
+<li>CP is overrated. At least for internships. For bagging a FAANG offer, it is an absolute necessity. Apart from that, a decent knowledge of basic data structures and algorithms suffices.</li>
+<li>If you love something, keep doing that. There will be companies offering based on your strong points alone.</li>
+<li>To people doing CP only: do explore other avenues. Building a software is way more fun than getting a solution accepted.</li>
+<li>To people doing Software Development only: Focus a little more on DSA. Trust me; it will take your system design skills to the next level.</li>
+<li>Finally, whatever happens, be resilient and don't lose hope.</li>
+<li>Talk to your peers, seniors and family. You are not alone in this.</li>
+</ol>
+
+        </div>
+
+        
+    </div>
+
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright">
+                        <span>© 
+    2021
+ Shubham Mishra</span>
+                    <span class="copyright-theme">
+                        <span class="copyright-theme-sep">:: </span>
+                        Theme: <a href="https://github.com/pawroman/zola-theme-terminimal/">Terminimal</a> by pawroman
+                    </span>
+                </div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>

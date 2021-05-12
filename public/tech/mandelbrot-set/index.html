@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://grapheo12.in/style.css">
+    <link rel="stylesheet" href="https://grapheo12.in/color/green.css">
+
+        <link rel="stylesheet" href="https://grapheo12.in/color/background_black.css">
+    
+    <link rel="stylesheet" href="https://grapheo12.in/font-hack.css">
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+    };
+</script>
+</head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://grapheo12.in" style="text-decoration: none;">
+                    <div class="logo">
+                            grapheo12
+                        </div>
+                </a>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <ul class="menu__inner">
+                <li><a href="https://grapheo12.in">about me</a></li>
+            
+                <li class="active"><a href="https://grapheo12.in/tech">tech</a></li>
+            
+                <li><a href="https://grapheo12.in/literature">literature</a></li>
+            
+                <li><a href="https://grapheo12.in/life">life</a></li>
+            
+                <li><a href="https://grapheo12.in/music">music</a></li>
+            
+                <li><a href="https://grapheo12.in/slides">slides & lectures</a></li>
+            
+                <li><a href="https://grapheo12.in/tags">tags</a></li>
+            </ul>
+        </nav>
+    
+    </header>
+    
+
+    <div class="content">
+        
+    <div class="post">
+        
+    <h1 class="post-title"><a href="https://grapheo12.in/tech/mandelbrot-set/">Visualizing the Mandelbrot Set</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2020-07-17
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://grapheo12.in/tags/javascript/">#javascript</a>&nbsp;
+                <a class="post-tag" href="https://grapheo12.in/tags/p5-js/">#p5.js</a></span>
+    
+
+        
+        <div class="post-content">
+            <h2 id="motivation">Motivation</h2>
+<p>For quite some time, I follow the <strong>The Coding Train</strong> on Youtube.
+The delivery of the Prof. Shiffman is mind-blowing, to say the least.
+It is due to his videos that I got interested in <strong>p5.js</strong> and started learning it.
+This rendering of the Mandelbrot set is one of my first creations with this library.
+Although, this may not be as good as his rendering,
+but I wrote everything from scratch to the best of my abilities.</p>
+<p>Final result achieved:
+<img src="/img/mandelbrot.gif" alt="Final Result" /></p>
+<span id="continue-reading"></span><h2 id="what-is-p5-js">What is p5.js?</h2>
+<p><a href="https://p5js.org">p5.js</a> is a JavaScript library maintained by the <em>Processing Foundation</em>.
+It is a JS alternative to the Processing library for Java.
+Among other things, it gives fantastic drawing and rendering capabilities,
+both in 2D and 3D (using WebGL).
+We'll use the 2D drawing part of p5 in this post.</p>
+<h2 id="mandelbrot-set">Mandelbrot Set</h2>
+<p>You need to have some basic knowledge about Complex numbers and their functions
+to understand the concept behind Mandelbrot set.
+Here's a primer:</p>
+<p>Complex numbers are numbers of the form $$ z = a + ib $$
+where a and b are Real numbers and $$ i = \sqrt{-1} $$</p>
+<p>Here, a is the <em>Real</em> Component and <em>b</em> is the Imaginary component.</p>
+<p>Thus to define a complex number, we require to 2 numbers.
+What else requires 2 numbers to define?
+Yes, the points in a plane.
+Hence we can map each complex number to a point (a, b) in a Cartesian plane
+and plot the same on a Graph.</p>
+<p>Such a diagram is called <strong>Argand diagram</strong>.</p>
+<p>Regular algebra applies to complex numbers. So</p>
+<p>$$
+(a + ib) + (c + id) = (a + c) + i \cdot (c + d)
+$$
+$$
+(a + ib) ^ 2 = a ^ 2 + (ib) ^ 2 + 2iab = (a ^ 2 - b ^ 2) - i \cdot (2ab) [\because i ^ 2 = -1] 
+$$</p>
+<p>Also for each complex number we define its <em>modulus</em> as a real number given by:
+$$
+|z| = \sqrt{a ^ 2 + b ^ 2}
+$$</p>
+<p>That's all of Complex numbers you need here.</p>
+<p>Now let's consider a function of the Complex numbers as:
+$$
+f(z) = z ^ 2 + c
+$$
+Here both z and c are complex.</p>
+<p>For a given c, if we form a sequence like the following:
+$$
+{ f(0), f(f(0)), f(f(f(0))), ... }
+$$
+the modulus of the values of the sequence can get arbitrarily large after some steps,
+or it can remain bounded.
+What the sequence will do, is directed by the value of c alone.</p>
+<blockquote>
+<p>The values of c for which the sequence remains bounded (even after infinite steps) constitute the Mandelbrot Set.</p>
+</blockquote>
+<h2 id="visualization">Visualization</h2>
+<p>Phew! that was quite the definition.
+But how do we know, what will happen infinite steps?
+We don't have a closed form expression for that.</p>
+<p>Instead, we can do a little cheating and run the simulation for a fixed number of steps.
+Then we need to choose a threshold value.
+If, for a given c, the modulus of the value achieved after interating for that many steps
+is less than or equal to the threshold, we keep c in the set
+(and colour the corresponding point black)
+else, we reject c
+(and colour the corresponding point white).</p>
+<p>This gives a plain black and white image of the Mandelbrot boundary.
+But to make the things more interesting,
+we can play with the modulus value, and use that to create a colour gradient.</p>
+<h2 id="enough-talk-show-me-the-code">Enough talk, show me the code!</h2>
+<p>We begin by creating a <code>index.html</code> file to import all the libraries.</p>
+<pre style="background-color:#151515;">
+<code><span style="color:#e8e8d3;">&lt;!DOCTYPE html&gt;
+&lt;</span><span style="color:#ffb964;">html</span><span style="color:#e8e8d3;">&gt;
+    &lt;</span><span style="color:#ffb964;">head</span><span style="color:#e8e8d3;">&gt;
+        &lt;</span><span style="color:#ffb964;">title</span><span style="color:#e8e8d3;">&gt;Mandelbrot Set&lt;/</span><span style="color:#ffb964;">title</span><span style="color:#e8e8d3;">&gt;
+        &lt;</span><span style="color:#ffb964;">meta name</span><span style="color:#e8e8d3;">=</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">charset</span><span style="color:#556633;">&quot; </span><span style="color:#ffb964;">content</span><span style="color:#e8e8d3;">=</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">utf-8</span><span style="color:#556633;">&quot;</span><span style="color:#e8e8d3;">&gt;
+        &lt;</span><span style="color:#ffb964;">meta name</span><span style="color:#e8e8d3;">=</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">viewport</span><span style="color:#556633;">&quot; </span><span style="color:#ffb964;">content</span><span style="color:#e8e8d3;">=</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">width=device-width</span><span style="color:#556633;">&quot;</span><span style="color:#e8e8d3;">&gt;
+        &lt;</span><span style="color:#ffb964;">script src</span><span style="color:#e8e8d3;">=</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js</span><span style="color:#556633;">&quot;</span><span style="color:#e8e8d3;">&gt;&lt;/</span><span style="color:#ffb964;">script</span><span style="color:#e8e8d3;">&gt;
+        &lt;</span><span style="color:#ffb964;">script src</span><span style="color:#e8e8d3;">=</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js</span><span style="color:#556633;">&quot;</span><span style="color:#e8e8d3;">&gt;&lt;/</span><span style="color:#ffb964;">script</span><span style="color:#e8e8d3;">&gt;
+    &lt;/</span><span style="color:#ffb964;">head</span><span style="color:#e8e8d3;">&gt;
+
+    &lt;</span><span style="color:#ffb964;">body</span><span style="color:#e8e8d3;">&gt;
+        &lt;</span><span style="color:#ffb964;">script src</span><span style="color:#e8e8d3;">=</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">sketch.js</span><span style="color:#556633;">&quot;</span><span style="color:#e8e8d3;">&gt;&lt;/</span><span style="color:#ffb964;">script</span><span style="color:#e8e8d3;">&gt;
+    &lt;/</span><span style="color:#ffb964;">body</span><span style="color:#e8e8d3;">&gt;
+&lt;/</span><span style="color:#ffb964;">html</span><span style="color:#e8e8d3;">&gt;
+</span></code></pre>
+<p>Then in the <code>sketch.js</code> file, I begin by defining complex numbers:</p>
+<pre style="background-color:#151515;">
+<code><span style="color:#8fbfdc;">class </span><span style="color:#ffb964;">Complex</span><span style="color:#e8e8d3;">{
+    </span><span style="color:#8fbfdc;">constructor</span><span style="color:#e8e8d3;">(</span><span style="color:#ffb964;">real</span><span style="color:#e8e8d3;">, </span><span style="color:#ffb964;">imag</span><span style="color:#e8e8d3;">){
+        </span><span style="color:#ffb964;">this</span><span style="color:#e8e8d3;">.</span><span style="color:#ffb964;">real </span><span style="color:#e8e8d3;">= </span><span style="color:#ffb964;">real</span><span style="color:#e8e8d3;">;
+        </span><span style="color:#ffb964;">this</span><span style="color:#e8e8d3;">.</span><span style="color:#ffb964;">imag </span><span style="color:#e8e8d3;">= </span><span style="color:#ffb964;">imag</span><span style="color:#e8e8d3;">;
+    }
+
+    </span><span style="color:#fad07a;">square</span><span style="color:#e8e8d3;">(){
+        </span><span style="color:#8fbfdc;">let </span><span style="color:#ffb964;">realtemp </span><span style="color:#e8e8d3;">= </span><span style="color:#ffb964;">this</span><span style="color:#e8e8d3;">.</span><span style="color:#ffb964;">real </span><span style="color:#e8e8d3;">* </span><span style="color:#ffb964;">this</span><span style="color:#e8e8d3;">.</span><span style="color:#ffb964;">real </span><span style="color:#e8e8d3;">- </span><span style="color:#ffb964;">this</span><span style="color:#e8e8d3;">.</span><span style="color:#ffb964;">imag </span><span style="color:#e8e8d3;">* </span><span style="color:#ffb964;">this</span><span style="color:#e8e8d3;">.</span><span style="color:#ffb964;">imag</span><span style="color:#e8e8d3;">;
+        </span><span style="color:#8fbfdc;">let </span><span style="color:#ffb964;">imagtemp </span><span style="color:#e8e8d3;">= </span><span style="color:#cf6a4c;">2 </span><span style="color:#e8e8d3;">* </span><span style="color:#ffb964;">this</span><span style="color:#e8e8d3;">.</span><span style="color:#ffb964;">real </span><span style="color:#e8e8d3;">* </span><span style="color:#ffb964;">this</span><span style="color:#e8e8d3;">.</span><span style="color:#ffb964;">imag</span><span style="color:#e8e8d3;">;
+        </span><span style="color:#ffb964;">this</span><span style="color:#e8e8d3;">.</span><span style="color:#ffb964;">real </span><span style="color:#e8e8d3;">= </span><span style="color:#ffb964;">realtemp</span><span style="color:#e8e8d3;">;
+        </span><span style="color:#ffb964;">this</span><span style="color:#e8e8d3;">.</span><span style="color:#ffb964;">imag </span><span style="color:#e8e8d3;">= </span><span style="color:#ffb964;">imagtemp</span><span style="color:#e8e8d3;">;
+    }
+
+    </span><span style="color:#fad07a;">add</span><span style="color:#e8e8d3;">(</span><span style="color:#ffb964;">r</span><span style="color:#e8e8d3;">, </span><span style="color:#ffb964;">i</span><span style="color:#e8e8d3;">){
+        </span><span style="color:#ffb964;">this</span><span style="color:#e8e8d3;">.</span><span style="color:#ffb964;">real </span><span style="color:#e8e8d3;">+= </span><span style="color:#ffb964;">r</span><span style="color:#e8e8d3;">;
+        </span><span style="color:#ffb964;">this</span><span style="color:#e8e8d3;">.</span><span style="color:#ffb964;">imag </span><span style="color:#e8e8d3;">+= </span><span style="color:#ffb964;">i</span><span style="color:#e8e8d3;">;
+    }
+
+    </span><span style="color:#fad07a;">modulus</span><span style="color:#e8e8d3;">(){
+        </span><span style="color:#8fbfdc;">return </span><span style="color:#e8e8d3;">Math.sqrt(</span><span style="color:#ffb964;">this</span><span style="color:#e8e8d3;">.</span><span style="color:#ffb964;">real </span><span style="color:#e8e8d3;">* </span><span style="color:#ffb964;">this</span><span style="color:#e8e8d3;">.</span><span style="color:#ffb964;">real </span><span style="color:#e8e8d3;">+ </span><span style="color:#ffb964;">this</span><span style="color:#e8e8d3;">.</span><span style="color:#ffb964;">imag </span><span style="color:#e8e8d3;">* </span><span style="color:#ffb964;">this</span><span style="color:#e8e8d3;">.</span><span style="color:#ffb964;">imag</span><span style="color:#e8e8d3;">);
+    }
+
+    </span><span style="color:#fad07a;">mandelbrotFunc</span><span style="color:#e8e8d3;">(</span><span style="color:#ffb964;">r</span><span style="color:#e8e8d3;">, </span><span style="color:#ffb964;">i</span><span style="color:#e8e8d3;">){
+        </span><span style="color:#ffb964;">this</span><span style="color:#e8e8d3;">.</span><span style="color:#fad07a;">square</span><span style="color:#e8e8d3;">();
+        </span><span style="color:#ffb964;">this</span><span style="color:#e8e8d3;">.add(</span><span style="color:#ffb964;">r</span><span style="color:#e8e8d3;">, </span><span style="color:#ffb964;">i</span><span style="color:#e8e8d3;">);
+    }
+}
+</span></code></pre>
+<p>Notice how the mathematical operations are in-place.
+Since to compute the Graph, I need a grid of such complex numbers,
+not doing it in place uses up a lot of extra memory
+which is surprisingly not cleaned up by the garbage collector fast.
+This is a little bit of optimization that I had to do.</p>
+<p><code>p5.js</code> expects two main functions to be present in the <code>sketch.js</code>:</p>
+<ul>
+<li><code>setup()</code> which is run once.</li>
+<li><code>draw()</code> which is run every frame</li>
+</ul>
+<p>In the setup, I define the 2D grid that will hold the simulation values:
+$$ f(f(...f(0))) $$
+for each c:</p>
+<pre style="background-color:#151515;">
+<code><span style="color:#8fbfdc;">let </span><span style="color:#ffb964;">grid</span><span style="color:#e8e8d3;">;
+</span><span style="color:#8fbfdc;">const </span><span style="color:#ffb964;">rows </span><span style="color:#e8e8d3;">= </span><span style="color:#cf6a4c;">500</span><span style="color:#e8e8d3;">;
+</span><span style="color:#8fbfdc;">const </span><span style="color:#ffb964;">cols </span><span style="color:#e8e8d3;">= </span><span style="color:#cf6a4c;">500</span><span style="color:#e8e8d3;">;
+</span><span style="color:#8fbfdc;">let </span><span style="color:#ffb964;">w</span><span style="color:#e8e8d3;">, </span><span style="color:#ffb964;">h</span><span style="color:#e8e8d3;">;
+</span><span style="color:#8fbfdc;">function </span><span style="color:#fad07a;">setup</span><span style="color:#e8e8d3;">(){
+    </span><span style="color:#fad07a;">createCanvas</span><span style="color:#e8e8d3;">(</span><span style="color:#cf6a4c;">500</span><span style="color:#e8e8d3;">, </span><span style="color:#cf6a4c;">500</span><span style="color:#e8e8d3;">);
+    </span><span style="color:#ffb964;">grid </span><span style="color:#e8e8d3;">= new </span><span style="color:#ffb964;">Array</span><span style="color:#e8e8d3;">(</span><span style="color:#ffb964;">rows</span><span style="color:#e8e8d3;">);
+    </span><span style="color:#8fbfdc;">for </span><span style="color:#e8e8d3;">(</span><span style="color:#8fbfdc;">let </span><span style="color:#ffb964;">i </span><span style="color:#e8e8d3;">= </span><span style="color:#cf6a4c;">0</span><span style="color:#e8e8d3;">; </span><span style="color:#ffb964;">i </span><span style="color:#e8e8d3;">&lt; </span><span style="color:#ffb964;">rows</span><span style="color:#e8e8d3;">; </span><span style="color:#ffb964;">i</span><span style="color:#e8e8d3;">++){
+        </span><span style="color:#ffb964;">grid</span><span style="color:#e8e8d3;">[</span><span style="color:#ffb964;">i</span><span style="color:#e8e8d3;">] = new </span><span style="color:#ffb964;">Array</span><span style="color:#e8e8d3;">(</span><span style="color:#ffb964;">cols</span><span style="color:#e8e8d3;">);
+        </span><span style="color:#8fbfdc;">for </span><span style="color:#e8e8d3;">(</span><span style="color:#8fbfdc;">let </span><span style="color:#ffb964;">j </span><span style="color:#e8e8d3;">= </span><span style="color:#cf6a4c;">0</span><span style="color:#e8e8d3;">; </span><span style="color:#ffb964;">j </span><span style="color:#e8e8d3;">&lt; </span><span style="color:#ffb964;">cols</span><span style="color:#e8e8d3;">; </span><span style="color:#ffb964;">j</span><span style="color:#e8e8d3;">++){
+            </span><span style="color:#ffb964;">grid</span><span style="color:#e8e8d3;">[</span><span style="color:#ffb964;">i</span><span style="color:#e8e8d3;">][</span><span style="color:#ffb964;">j</span><span style="color:#e8e8d3;">] = new </span><span style="color:#ffb964;">Complex</span><span style="color:#e8e8d3;">(</span><span style="color:#cf6a4c;">0</span><span style="color:#e8e8d3;">, </span><span style="color:#cf6a4c;">0</span><span style="color:#e8e8d3;">);
+        }
+    }
+
+    </span><span style="color:#ffb964;">w </span><span style="color:#e8e8d3;">= </span><span style="color:#ffb964;">width </span><span style="color:#e8e8d3;">/ </span><span style="color:#ffb964;">rows</span><span style="color:#e8e8d3;">;
+    </span><span style="color:#ffb964;">h </span><span style="color:#e8e8d3;">= </span><span style="color:#ffb964;">height </span><span style="color:#e8e8d3;">/ </span><span style="color:#ffb964;">cols</span><span style="color:#e8e8d3;">;
+}
+</span></code></pre>
+<p>Next I write the draw function:</p>
+<pre style="background-color:#151515;">
+<code><span style="color:#8fbfdc;">const </span><span style="color:#ffb964;">threshold </span><span style="color:#e8e8d3;">= </span><span style="color:#cf6a4c;">0.1</span><span style="color:#e8e8d3;">;
+</span><span style="color:#8fbfdc;">let </span><span style="color:#ffb964;">scl </span><span style="color:#e8e8d3;">= </span><span style="color:#cf6a4c;">300</span><span style="color:#e8e8d3;">;
+</span><span style="color:#8fbfdc;">let </span><span style="color:#ffb964;">iter </span><span style="color:#e8e8d3;">= </span><span style="color:#cf6a4c;">15</span><span style="color:#e8e8d3;">;
+</span><span style="color:#8fbfdc;">function </span><span style="color:#fad07a;">draw</span><span style="color:#e8e8d3;">(){
+    </span><span style="color:#fad07a;">background</span><span style="color:#e8e8d3;">(</span><span style="color:#cf6a4c;">255</span><span style="color:#e8e8d3;">);
+    </span><span style="color:#8fbfdc;">for </span><span style="color:#e8e8d3;">(</span><span style="color:#8fbfdc;">let </span><span style="color:#ffb964;">i </span><span style="color:#e8e8d3;">= </span><span style="color:#cf6a4c;">0</span><span style="color:#e8e8d3;">; </span><span style="color:#ffb964;">i </span><span style="color:#e8e8d3;">&lt; </span><span style="color:#ffb964;">rows</span><span style="color:#e8e8d3;">; </span><span style="color:#ffb964;">i</span><span style="color:#e8e8d3;">++){
+        </span><span style="color:#8fbfdc;">for </span><span style="color:#e8e8d3;">(</span><span style="color:#8fbfdc;">let </span><span style="color:#ffb964;">j </span><span style="color:#e8e8d3;">= </span><span style="color:#cf6a4c;">0</span><span style="color:#e8e8d3;">; </span><span style="color:#ffb964;">j </span><span style="color:#e8e8d3;">&lt; </span><span style="color:#ffb964;">cols</span><span style="color:#e8e8d3;">; </span><span style="color:#ffb964;">j</span><span style="color:#e8e8d3;">++){
+            </span><span style="color:#8fbfdc;">if </span><span style="color:#e8e8d3;">(</span><span style="color:#ffb964;">grid</span><span style="color:#e8e8d3;">[</span><span style="color:#ffb964;">i</span><span style="color:#e8e8d3;">][</span><span style="color:#ffb964;">j</span><span style="color:#e8e8d3;">].</span><span style="color:#fad07a;">modulus</span><span style="color:#e8e8d3;">() &lt; </span><span style="color:#ffb964;">threshold</span><span style="color:#e8e8d3;">){
+                </span><span style="color:#fad07a;">fill</span><span style="color:#e8e8d3;">(</span><span style="color:#cf6a4c;">0</span><span style="color:#e8e8d3;">);
+            }</span><span style="color:#8fbfdc;">else</span><span style="color:#e8e8d3;">{
+                </span><span style="color:#8fbfdc;">let </span><span style="color:#ffb964;">val </span><span style="color:#e8e8d3;">= </span><span style="color:#ffb964;">grid</span><span style="color:#e8e8d3;">[</span><span style="color:#ffb964;">i</span><span style="color:#e8e8d3;">][</span><span style="color:#ffb964;">j</span><span style="color:#e8e8d3;">].</span><span style="color:#fad07a;">modulus</span><span style="color:#e8e8d3;">();
+                </span><span style="color:#fad07a;">fill</span><span style="color:#e8e8d3;">(</span><span style="color:#fad07a;">floor</span><span style="color:#e8e8d3;">(</span><span style="color:#ffb964;">val </span><span style="color:#e8e8d3;">* </span><span style="color:#cf6a4c;">256</span><span style="color:#e8e8d3;">), </span><span style="color:#fad07a;">floor</span><span style="color:#e8e8d3;">(</span><span style="color:#ffb964;">val </span><span style="color:#e8e8d3;">* </span><span style="color:#cf6a4c;">256 </span><span style="color:#e8e8d3;">/ </span><span style="color:#cf6a4c;">2</span><span style="color:#e8e8d3;">), </span><span style="color:#fad07a;">floor</span><span style="color:#e8e8d3;">(</span><span style="color:#ffb964;">val </span><span style="color:#e8e8d3;">* </span><span style="color:#cf6a4c;">256 </span><span style="color:#e8e8d3;">/ </span><span style="color:#cf6a4c;">3</span><span style="color:#e8e8d3;">));
+            }
+            </span><span style="color:#fad07a;">noStroke</span><span style="color:#e8e8d3;">();
+            </span><span style="color:#fad07a;">rect</span><span style="color:#e8e8d3;">(</span><span style="color:#ffb964;">i </span><span style="color:#e8e8d3;">* </span><span style="color:#ffb964;">h</span><span style="color:#e8e8d3;">, </span><span style="color:#ffb964;">j </span><span style="color:#e8e8d3;">* </span><span style="color:#ffb964;">w</span><span style="color:#e8e8d3;">, </span><span style="color:#ffb964;">w</span><span style="color:#e8e8d3;">, </span><span style="color:#ffb964;">h</span><span style="color:#e8e8d3;">);
+            </span><span style="color:#888888;">// translate(width / 2, 0);
+            </span><span style="color:#8fbfdc;">if </span><span style="color:#e8e8d3;">(</span><span style="color:#ffb964;">iter </span><span style="color:#e8e8d3;">&gt; </span><span style="color:#cf6a4c;">0</span><span style="color:#e8e8d3;">)
+                </span><span style="color:#ffb964;">grid</span><span style="color:#e8e8d3;">[</span><span style="color:#ffb964;">i</span><span style="color:#e8e8d3;">][</span><span style="color:#ffb964;">j</span><span style="color:#e8e8d3;">].</span><span style="color:#fad07a;">mandelbrotFunc</span><span style="color:#e8e8d3;">(</span><span style="color:#fad07a;">map</span><span style="color:#e8e8d3;">(</span><span style="color:#ffb964;">i</span><span style="color:#e8e8d3;">, </span><span style="color:#cf6a4c;">0</span><span style="color:#e8e8d3;">, </span><span style="color:#ffb964;">rows</span><span style="color:#e8e8d3;">, -</span><span style="color:#ffb964;">rows</span><span style="color:#e8e8d3;">, </span><span style="color:#ffb964;">rows</span><span style="color:#e8e8d3;">) / </span><span style="color:#ffb964;">scl</span><span style="color:#e8e8d3;">, </span><span style="color:#fad07a;">map</span><span style="color:#e8e8d3;">(</span><span style="color:#ffb964;">j</span><span style="color:#e8e8d3;">, </span><span style="color:#cf6a4c;">0</span><span style="color:#e8e8d3;">, </span><span style="color:#ffb964;">cols</span><span style="color:#e8e8d3;">, -</span><span style="color:#ffb964;">cols</span><span style="color:#e8e8d3;">, </span><span style="color:#ffb964;">cols</span><span style="color:#e8e8d3;">) / </span><span style="color:#ffb964;">scl</span><span style="color:#e8e8d3;">);
+        }
+    }
+
+    </span><span style="color:#ffb964;">iter</span><span style="color:#e8e8d3;">--;
+}
+</span></code></pre>
+<p>The line <code>fill(floor(val * 256), floor(val * 256 / 2), floor(val * 256 / 3));</code> actually defines the colour gradient.
+Note that, it is not guranteed to always lie in [0, 255] range.
+But if it goes beyond 255, it automatically becomes white.
+It can not less than 1,
+because before reaching that value, we automatically set the colour to black using the line <code>fill(0);</code>.</p>
+<p>The <code>rect</code> function is used to draw a tiny rectangle with the specified colour for that grid.</p>
+<p>The main variables of interest are <code>iter</code> and <code>scl</code>.
+<code>iter</code> controls the number of steps for which to run the simulation.
+I saw that 15 was a good number for a clear image.
+The <code>scl</code> variable controls the zoom of the image.
+The larger the scl, the bigger the zoom would be.
+To get a satifactiory result, I set it to 300 after much tuning.</p>
+<p>That is all for this post! Let me know your insights.</p>
+
+        </div>
+
+        
+        <div class="pagination">
+            <div class="pagination__title">
+                <span class="pagination__title-h">Not bored enough? See other posts....</span>
+                <hr />
+            </div>
+            <div class="pagination__buttons">
+                    <span class="button previous">
+                        <a href="https://grapheo12.in/tech/gravity-simulation/">
+                            <span class="button__icon">←</span>&nbsp;
+                            <span class="button__text">Simulating Motion under Gravitation</span>
+                        </a>
+                    </span>
+                
+                
+                    <span class="button next">
+                        <a href="https://grapheo12.in/tech/terminal-apps/">
+                            <span class="button__text">Cut bloat, move fast with Terminal apps</span>&nbsp;
+                            <span class="button__icon">→</span>
+                        </a>
+                    </span>
+                </div>
+        </div>
+    
+    </div>
+
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright">
+                        <span>© 
+    2021
+ Shubham Mishra</span>
+                    <span class="copyright-theme">
+                        <span class="copyright-theme-sep">:: </span>
+                        Theme: <a href="https://github.com/pawroman/zola-theme-terminimal/">Terminimal</a> by pawroman
+                    </span>
+                </div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>

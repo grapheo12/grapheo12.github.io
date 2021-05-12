@@ -1,0 +1,40 @@
+# The URL the site will be built for
+base_url = "https://grapheo12.in"
+
+theme = "terminimal"
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+highlight_theme = "boron"
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+taxonomies = [
+    {name = "tags"}
+]
+
+
+[extra]
+# Put all your custom variables here
+accent_color = "green"
+logo_text = "grapheo12"
+background_color = "black"
+author = "Shubham Mishra"
+
+menu_items = [
+    {name = "about me", url = "$BASE_URL"},
+    {name = "tech", url = "$BASE_URL/tech"},
+    {name = "literature", url = "$BASE_URL/literature"},
+    {name = "life", url = "$BASE_URL/life"},
+    {name = "music", url = "$BASE_URL/music"},
+    {name = "slides & lectures", url = "$BASE_URL/slides"},
+    {name = "tags", url = "$BASE_URL/tags"}
+]
+
+enable_post_view_navigation = true
+post_view_navigation_prompt = "Not bored enough? See other posts...."
+use_full_hack_font = true
