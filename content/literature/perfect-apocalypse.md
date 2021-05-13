@@ -35,6 +35,8 @@ Then you, gasping for breath
 
 Pray for your death as a bless.
 
+<br>
+
 A perfect apocalypse
 
 Doesn't leave exposed bodies on road
@@ -50,6 +52,8 @@ Even vultures watch in awe
 As men eat men raw
 
 Across caste, creed and cultures.
+
+<br>
 
 A perfect apocalypse
 

@@ -1,6 +1,6 @@
 # The URL the site will be built for
 base_url = "https://grapheo12.in"
-tile = "grapheo12's Blog"
+title = "grapheo12's Blog"
 
 theme = "terminimal"
 # Whether to automatically compile all Sass files in the sass directory
