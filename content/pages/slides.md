@@ -3,6 +3,10 @@ title = "slides & lectures"
 path = "slides"
 +++
 
+# QSC Project
+
+- [[ODP] QSC Presentation](https://grapheo12.github.io/yt-slides/qsc.odp)
+
 # BTP
 
 - [[PPT] Project Seminar](https://grapheo12.github.io/yt-slides/btp.hml)
