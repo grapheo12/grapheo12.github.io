@@ -99,6 +99,9 @@
         <loc>https://grapheo12.in/tags/corona/</loc>
     </url>
     <url>
+        <loc>https://grapheo12.in/tags/distributed-systems/</loc>
+    </url>
+    <url>
         <loc>https://grapheo12.in/tags/epfl/</loc>
     </url>
     <url>
@@ -115,6 +118,9 @@
     </url>
     <url>
         <loc>https://grapheo12.in/tags/javascript/</loc>
+    </url>
+    <url>
+        <loc>https://grapheo12.in/tags/logical-clocks/</loc>
     </url>
     <url>
         <loc>https://grapheo12.in/tags/p5-js/</loc>
@@ -161,6 +167,10 @@
     <url>
         <loc>https://grapheo12.in/tech/gravity-simulation/</loc>
         <lastmod>2020-07-20</lastmod>
+    </url>
+    <url>
+        <loc>https://grapheo12.in/tech/lamport-clock/</loc>
+        <lastmod>2021-05-25</lastmod>
     </url>
     <url>
         <loc>https://grapheo12.in/tech/mandelbrot-set/</loc>
