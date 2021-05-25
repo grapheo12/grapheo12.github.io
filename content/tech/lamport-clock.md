@@ -16,6 +16,8 @@ a simple wall clock will not be sufficient.
 Well, it is sufficient, if all of us follow the same clock.
 But in a distributed sense it is often not the case.
 
+<!-- more -->
+
 Consider the following (somewhat phoney) example:
 
 Ram and Shyam meet at Howrah Station
