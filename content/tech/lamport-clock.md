@@ -25,7 +25,7 @@ Shyam doesn't know that his watch is faulty and has stopped for an hour in midst
 
 Ram's job is to note what the bowler does, while Sam records the batsman.
 
-At the end of the day, there notebooks look like these:
+At the end of the day, their notebooks look like these:
 
 ```
 [Ram]
@@ -337,7 +337,7 @@ This shows the `max` operation at work and that node 4 had quite a lot of events
 # References
 
 I have merely scratched the surface.
-I mean, what's a post about distributed systems doing, without a timing diagram!
+I mean, what's a post about distributed systems doing without a timing diagram!
 
 These, however, are far better resources:
 
