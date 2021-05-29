@@ -18,6 +18,8 @@ taxonomies = [
     {name = "tags"}
 ]
 
+generate_feed = true
+feed_filename = "feed.xml"
 
 [extra]
 # Put all your custom variables here

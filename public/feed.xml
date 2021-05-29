@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>grapheo12&#x27;s Blog</title>
+        <link>https://grapheo12.in</link>
+        <description></description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="https://grapheo12.in/feed.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Tue, 25 May 2021 00:00:00 +0000</lastBuildDate>
+        <item>
+            <title>Lamport Clocks</title>
+            <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>
+            <link>https://grapheo12.in/tech/lamport-clock/</link>
+            <guid>https://grapheo12.in/tech/lamport-clock/</guid>
+            <description>&lt;h1 id=&quot;problem-with-physical-clocks&quot;&gt;Problem with Physical Clocks&lt;&#x2F;h1&gt;
+&lt;p&gt;There are a lot of good stuff that a wall clock does.
+For example, telling you the time. :-)&lt;&#x2F;p&gt;
+&lt;p&gt;But when it comes to ordering a set of events,
+a simple wall clock will not be sufficient.
+Well, it is sufficient, if all of us follow the same clock.
+But in a distributed sense it is often not the case.&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Perfect Apocalypse</title>
+            <pubDate>Fri, 30 Apr 2021 00:00:00 +0000</pubDate>
+            <link>https://grapheo12.in/literature/perfect-apocalypse/</link>
+            <guid>https://grapheo12.in/literature/perfect-apocalypse/</guid>
+            <description>&lt;p&gt;A perfect apocalypse&lt;&#x2F;p&gt;
+&lt;p&gt;Does not kill you when you&#x27;re asleep.&lt;&#x2F;p&gt;
+&lt;p&gt;No, it is too easy&lt;&#x2F;p&gt;
+&lt;p&gt;To die and be forgotten&lt;&#x2F;p&gt;
+&lt;p&gt;To lie with flesh rotten.&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Melancholy</title>
+            <pubDate>Wed, 03 Mar 2021 00:00:00 +0000</pubDate>
+            <link>https://grapheo12.in/literature/melancholy/</link>
+            <guid>https://grapheo12.in/literature/melancholy/</guid>
+            <description>&lt;p&gt;I&#x27;m not depressed.&lt;&#x2F;p&gt;
+&lt;p&gt;Not at all.&lt;&#x2F;p&gt;
+&lt;p&gt;But,&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Easy Form Management in React</title>
+            <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
+            <link>https://grapheo12.in/tech/recursive-react/</link>
+            <guid>https://grapheo12.in/tech/recursive-react/</guid>
+            <description>&lt;p&gt;Making a form in React and maintaining it can be painful.
+Especially if the form is complicated, with lots of sections and subsections.
+Each time a new change needs to be made,
+one needs to copy-paste some &lt;code&gt;input&lt;&#x2F;code&gt; tags,
+setup default values and configure the state of the form.
+If this sounds like an easy thing to do,
+wait till your client tells you to put
+field &lt;code&gt;A&lt;&#x2F;code&gt; from sub-subsection &lt;code&gt;X&lt;&#x2F;code&gt; of subsection &lt;code&gt;Y&lt;&#x2F;code&gt; of section &lt;code&gt;Z&lt;&#x2F;code&gt;
+inside subsection &lt;code&gt;P&lt;&#x2F;code&gt; of section &lt;code&gt;B&lt;&#x2F;code&gt;!
+Also, this &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Copypasta&quot;&gt;copypasta&lt;&#x2F;a&gt;
+pattern goes against the &lt;strong&gt;DRY&lt;&#x2F;strong&gt; (Don&#x27;t Repeat Yourself) principle.
+To get a feel for it, assume you have 100 copy-pasted components,
+and you need to change the input type of each one of them.
+Nightmare isn&#x27;t it?&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Simulating Motion under Gravitation</title>
+            <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
+            <link>https://grapheo12.in/tech/gravity-simulation/</link>
+            <guid>https://grapheo12.in/tech/gravity-simulation/</guid>
+            <description>&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;chaos.png&quot; alt=&quot;Even 2 body problems can lead to this&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Let&#x27;s be honest!
+I am falling in love with the p5.js framework.
+It makes my algorithms and simulations so beautifully presentable!
+And that too with so minimum amount of boilerplate.&lt;&#x2F;p&gt;
+&lt;p&gt;After building a &lt;a href=&quot;&#x2F;blog&#x2F;tech&#x2F;mandelbrot-set&#x2F;&quot;&gt;Mandelbrot set simulator&lt;&#x2F;a&gt;,
+I thought, why to stop here, let&#x27;s build something related to Physics,
+which I loved very much during my +2 days.
+Then the idea of creating the Gravitation simulator came into my mind.&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Noyono Tomare: An ageless pleasure</title>
+            <pubDate>Fri, 17 Jul 2020 00:00:00 +0000</pubDate>
+            <link>https://grapheo12.in/literature/noyono-tomare/</link>
+            <guid>https://grapheo12.in/literature/noyono-tomare/</guid>
+            <description>&lt;p&gt;No, this is not one of those useless stories &#x2F; poems that I write sometimes.
+For the past few months, I&#x27;ve been listening to a very special song on the loop.
+It is &lt;em&gt;&amp;quot;Noyono tomare&amp;quot;&lt;&#x2F;em&gt; by none other than Rabindranath Tagore.
+I often wonder why does this song attract me so much
+that I even try to sing it sometimes (although I fail terribly).
+It brings up latent emotions that I didn&#x27;t think ever existed in me.&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Visualizing the Mandelbrot Set</title>
+            <pubDate>Fri, 17 Jul 2020 00:00:00 +0000</pubDate>
+            <link>https://grapheo12.in/tech/mandelbrot-set/</link>
+            <guid>https://grapheo12.in/tech/mandelbrot-set/</guid>
+            <description>&lt;h2 id=&quot;motivation&quot;&gt;Motivation&lt;&#x2F;h2&gt;
+&lt;p&gt;For quite some time, I follow the &lt;strong&gt;The Coding Train&lt;&#x2F;strong&gt; on Youtube.
+The delivery of the Prof. Shiffman is mind-blowing, to say the least.
+It is due to his videos that I got interested in &lt;strong&gt;p5.js&lt;&#x2F;strong&gt; and started learning it.
+This rendering of the Mandelbrot set is one of my first creations with this library.
+Although, this may not be as good as his rendering,
+but I wrote everything from scratch to the best of my abilities.&lt;&#x2F;p&gt;
+&lt;p&gt;Final result achieved:
+&lt;img src=&quot;&#x2F;img&#x2F;mandelbrot.gif&quot; alt=&quot;Final Result&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>যে রথে বৃষ্টি হলো না</title>
+            <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
+            <link>https://grapheo12.in/literature/je-rothe/</link>
+            <guid>https://grapheo12.in/literature/je-rothe/</guid>
+            <description>&lt;p&gt;&amp;quot;মা, আজ এত ব্যস্ত কেন?&amp;quot;&lt;&#x2F;p&gt;
+&lt;p&gt;&amp;quot;সোনা, আজ না রথ!&lt;&#x2F;p&gt;
+&lt;p&gt;জিলিপি, পাঁপড়ভাজা, চপ-&lt;&#x2F;p&gt;
+&lt;p&gt;দোকানে যে ভরে যাবে পথ।&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Homecoming (?)</title>
+            <pubDate>Sat, 16 May 2020 00:00:00 +0000</pubDate>
+            <link>https://grapheo12.in/literature/homecoming/</link>
+            <guid>https://grapheo12.in/literature/homecoming/</guid>
+            <description>&lt;p&gt;Ram Bahadur ran a Momo shop. He was one of the many of his village in a remote corner of Alipur Duar, who had been dragged far from their roots by their job search. The shop, located at Tech Market, IIT Kharagpur, was owned by a villager Ram knew. Before he took over, the shop was but a small shanty in a dark corner of the market. But Ram knew business and was rather good at making Momos. And hence, the BTech batch of 2016-2020 saw the shop grow from a Tin-shed to a well-lit pucca room that could put a competition to even the neighbouring Sugar &amp;amp; Spice.&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Cut bloat, move fast with Terminal apps</title>
+            <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
+            <link>https://grapheo12.in/tech/terminal-apps/</link>
+            <guid>https://grapheo12.in/tech/terminal-apps/</guid>
+            <description>&lt;p&gt;The traditional GUI based applications for general purpose use are
+typically built for the laymen. But we ain&#x27;t no laymen, are we? We are
+developers: productivity is the key to our sustainance.&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>The Pendant</title>
+            <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>
+            <link>https://grapheo12.in/literature/the-pendant/</link>
+            <guid>https://grapheo12.in/literature/the-pendant/</guid>
+            <description>&lt;p&gt;** ** 1 ** **&lt;&#x2F;p&gt;
+&lt;p&gt;&amp;quot;This is the pendant that declares you to be a man of our clan.&amp;quot;, said
+father, as he raised the chain before my eyes. It was built of dull
+silver with a peculiar white stone in the middle. Attached to it was a
+long white tiger nail.&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Beginner&#x27;s Guide to Python</title>
+            <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+            <link>https://grapheo12.in/tech/python-guide/</link>
+            <guid>https://grapheo12.in/tech/python-guide/</guid>
+            <description>&lt;h2 id=&quot;what-is-python&quot;&gt;What is Python?&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The &lt;em&gt;Pythonidae&lt;&#x2F;em&gt;, commonly known simply as pythons, are a family of
+nonvenomous snakes found in Africa, Asia, and Australia. Among its
+members are some of the largest snakes in the world.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;-- Wikipedia&lt;&#x2F;p&gt;
+&lt;p&gt;Well, I didn&#x27;t mean this Python!&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Decaying Youth</title>
+            <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
+            <link>https://grapheo12.in/literature/decaying-youth/</link>
+            <guid>https://grapheo12.in/literature/decaying-youth/</guid>
+            <description>&lt;p&gt;What happens when life is short&lt;&#x2F;p&gt;
+&lt;p&gt;But you have long roads ahead.&lt;&#x2F;p&gt;
+&lt;p&gt;What happens when placements are near&lt;&#x2F;p&gt;
+&lt;p&gt;But your BST doesn&#x27;t build&lt;&#x2F;p&gt;
+</description>
+        </item>
+    </channel>
+</rss>
