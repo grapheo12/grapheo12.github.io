@@ -9,7 +9,7 @@ path = "slides"
 
 # BTP
 
-- [[PPT] Project Seminar](/yt-slides/btp.hml)
+- [[PPT] Project Seminar](/yt-slides/btp.html)
 - [[PPT] Homomorphic Encryption](/yt-slides/fhe.html)
 - [[PPT] Distributed Decryption of Regev Cryptosystem](/yt-slides/regev.html) 
 
