@@ -131,7 +131,7 @@ A few more random clicks:
 
 {{ figure(src="/img/Lausanne/ouchy-1.jpg", caption="On the way to the Jetee") }}
 
-{{ figure(src="/img/Lausanne/ouchy-2.jpg", caption="Maa, see they flower gardens") }}
+{{ figure(src="/img/Lausanne/ouchy-2.jpg", caption="Maa, see they have flower gardens here") }}
 
 {{ figure(src="/img/Lausanne/ouchy-3.jpg", caption="No cars allowed here on weekends") }}
 
