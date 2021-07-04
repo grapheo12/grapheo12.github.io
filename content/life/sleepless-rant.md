@@ -8,7 +8,7 @@ It's 4:41am. I can't sleep. The fridge is empty. So much unsatiated apetite! My 
 <!-- more -->
 
 I've been trying to sleep, but I just can't. Why not? Why am I so lousy? Why do I procrastinate so much? Why do I just pretend to work and not do anything? What am I doing with this life?
-Why is it that I have so many friends and yet not have them? What is so unlikable about me that my feelings aren't reciprocated?
+Why is it that I have so many friends and yet not have them? <!--What is so unlikable about me that my feelings aren't reciprocated?-->
 
 I know my family is with me but deep down I'm still hollow and lonely. I don't open up. I do sure talk about stuff that I can show off a bit, but I never open up. I don't ask for what I want. I don't, because I don't want to be judged as a wanting person or a creep.
 
